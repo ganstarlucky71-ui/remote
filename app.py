@@ -246,7 +246,7 @@ st.markdown(
 )
 
 st.title("☠️ 𝐋𝐔𝐂𝐊𝐘🌎𝙂𝙤𝙙𝙛𝙖𝙩𝙝𝙚𝙧🖥️")
-st.markdown("<p style='text-align: center; font-size: 1.2rem;'>[+] 𝐋𝐔𝐂𝐊𝐘🌎BOSS</p><hr>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 1.2rem;'>𝐋𝐔𝐂𝐊𝐘🌎BOSS</p><hr>", unsafe_allow_html=True)
 
 # 8 SERVERS LOOP CREATION
 for i, server in enumerate(SERVER_LIST):
