@@ -15,13 +15,13 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # ⚙️ APNE 8 SERVERS KI DETAILS YAHAN DAALEIN
 # ==========================================
 SERVER_LIST = [
-    {"name": "Server 1", "url": "https://server1.onrender.com"},
-    {"name": "Server 2", "url": "https://server2.onrender.com"},
-    {"name": "Server 3", "url": "https://server3.onrender.com"},
-    {"name": "Server 4", "url": "https://server4.onrender.com"},
-    {"name": "Server 5", "url": "https://server5.onrender.com"},
-    {"name": "Server 6", "url": "https://server6.onrender.com"},
-    {"name": "Server 7", "url": "https://server7.onrender.com"},
+    {"name": "Server 1", "url": "https://online-kbwr.onrender.com"},
+    {"name": "Server 2", "url": "https://online-tc0h.onrender.com"},
+    {"name": "Server 3", "url": "https://online-o8lk.onrender.com"},
+    {"name": "Server 4", "url": "https://online-ujtf.onrender.com"},
+    {"name": "Server 5", "url": "https://kamran-vtyt.onrender.com"},
+    {"name": "Server 6", "url": "https://online-mg7e.onrender.com"},
+    {"name": "Server 7", "url": "https://online-8eeq.onrender.com"},
     {"name": "Server 8", "url": "https://server8.onrender.com"},
 ]
 
@@ -246,7 +246,7 @@ st.markdown(
 )
 
 st.title("☠️ 𝐋𝐔𝐂𝐊𝐘🌎𝙂𝙤𝙙𝙛𝙖𝙩𝙝𝙚𝙧🖥️")
-st.markdown("<p style='text-align: center; font-size: 1.2rem;'>[+] SYS.ADMIN: ROOT | 𝐋𝐔𝐂𝐊𝐘 8-NODE CLUSTER</p><hr>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 1.2rem;'>[+] 𝐋𝐔𝐂𝐊𝐘🌎BOSS</p><hr>", unsafe_allow_html=True)
 
 # 8 SERVERS LOOP CREATION
 for i, server in enumerate(SERVER_LIST):
