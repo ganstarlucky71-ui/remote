@@ -227,7 +227,7 @@ def smart_resolve_input(input_str):
     return None
 
 # ==========================================
-# 🌐 STREAMLIT UI DESIGN (RGB DISCO & ZOO/AQUARIUM THEME)
+# 🌐 STREAMLIT UI DESIGN (RGB DISCO & BLACK BACKGROUND)
 # ==========================================
 st.set_page_config(page_title="LUCKY GODFATHER | RGB Command Center", page_icon="🎮", layout="wide")
 
@@ -237,12 +237,12 @@ st.markdown(
     /* Dark Background */
     .stApp { 
         background-color: #050505; 
-        background-image: radial-gradient(circle, #1a1a1a 0%, #000000 90%); 
+        background-image: radial-gradient(circle, #0a0a0a 0%, #000000 90%); 
         color: #ffffff; 
         font-family: 'Courier New', Courier, monospace; 
     }
     
-    /* DISCO LIGHT ANIMATION (Red, Yellow, Green, Blue, Pink) */
+    /* 🌈 RGB KEYFRAME ANIMATION FOR TEXT (Red, Yellow, Green, Blue, Pink) */
     @keyframes discoText {
         0% { color: #ff0040; text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040; }
         20% { color: #ffff00; text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00; }
@@ -287,6 +287,10 @@ st.markdown(
         position: relative;
         z-index: 10;
     }
+    .stTextInput input:focus {
+        outline: none !important;
+        background-color: #111111 !important;
+    }
     
     /* BUTTON RGB GAMING STYLE */
     .stButton>button { 
@@ -309,51 +313,18 @@ st.markdown(
         transform: scale(1.05); 
     }
     
-    /* ANIMALS/FISH BACKGROUND ANIMATION */
-    .animal-bg {
-        position: fixed;
-        top: 0; left: 0; width: 100vw; height: 100vh;
-        pointer-events: none;
-        z-index: 0;
-        overflow: hidden;
-    }
-    .animal {
-        position: absolute;
-        font-size: 30px;
-        right: -10%;
-        animation-name: roam;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        opacity: 0.8;
-    }
-    @keyframes roam {
-        0% { transform: translateX(50px) translateY(0px); }
-        25% { transform: translateX(-25vw) translateY(-30px); }
-        50% { transform: translateX(-50vw) translateY(20px); }
-        75% { transform: translateX(-75vw) translateY(-15px); }
-        100% { transform: translateX(-110vw) translateY(0px); }
+    /* Status Messages */
+    .stAlert {
+        background-color: rgba(10, 10, 10, 0.8) !important;
+        border: 1px solid #ffffff !important;
+        color: #ffffff !important;
+        z-index: 10;
+        position: relative;
     }
     
     /* HIDE STREAMLIT BRANDING */
     #MainMenu, footer, header {visibility: hidden;}
     </style>
-    
-    <!-- ANIMALS IN BACKGROUND -->
-    <div class="animal-bg">
-        <div class="animal" style="top: 10%; animation-duration: 18s; filter: hue-rotate(0deg);">🐼</div>
-        <div class="animal" style="top: 25%; animation-duration: 22s; filter: hue-rotate(90deg);">🐟</div>
-        <div class="animal" style="top: 40%; animation-duration: 15s; filter: hue-rotate(180deg);">🐍</div>
-        <div class="animal" style="top: 55%; animation-duration: 20s; filter: hue-rotate(270deg);">🐼</div>
-        <div class="animal" style="top: 70%; animation-duration: 25s; filter: hue-rotate(45deg);">🐟</div>
-        <div class="animal" style="top: 85%; animation-duration: 16s; filter: hue-rotate(135deg);">🐍</div>
-        <div class="animal" style="top: 15%; animation-duration: 24s; filter: hue-rotate(210deg); animation-delay: -5s;">🐼</div>
-        <div class="animal" style="top: 60%; animation-duration: 19s; filter: hue-rotate(300deg); animation-delay: -10s;">🐟</div>
-        <div class="animal" style="top: 30%; animation-duration: 21s; filter: hue-rotate(60deg); animation-delay: -8s;">🐍</div>
-        <div class="animal" style="top: 80%; animation-duration: 17s; filter: hue-rotate(330deg); animation-delay: -12s;">🐼</div>
-        <div class="animal" style="top: 45%; animation-duration: 23s; filter: hue-rotate(150deg); animation-delay: -15s;">🐟</div>
-        <div class="animal" style="top: 5%; animation-duration: 14s; filter: hue-rotate(250deg); animation-delay: -2s;">🐍</div>
-        <div class="animal" style="top: 90%; animation-duration: 20s; filter: hue-rotate(350deg); animation-delay: -7s;">🐟</div>
-    </div>
     """,
     unsafe_allow_html=True
 )
