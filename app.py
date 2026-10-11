@@ -22,11 +22,11 @@ SERVER_LIST = [
     {"name": "Server 5", "url": "https://kamran-vtyt.onrender.com"},
     {"name": "Server 6", "url": "https://online-mg7e.onrender.com"},
     {"name": "Server 7", "url": "https://online-8eeq.onrender.com"},
-    {"name": "Server 8", "url": "https://server8.onrender.com"},
+    {"name": "Smart Ai", "url": "https://smartai-f1ju.onrender.com"},
 ]
 
 MY_UID = "4470446192" 
-MY_TOKEN = "s1ADV49zvqESx6DepjwTcqq0Cgql5W1d7wcby1s3SFxYWtKHkuy42LityBpB48a%2B%2CnNM9ovMxw69wCMG9kYDPy1WV7mYLzptDoYnZSrDJYKSMDuL3O7%2FyVkjbgiTjkE8YaTctZsAbvlW4h%2Fzv8TERCAvN5FehqBTb2sv1OHTuQwUTTdPJAnPR0HsNd%2F%2Bx2c8ayXDITjLOZA%2FG1dfw3j1%2BPgDhpEJIE9%2FTvVmEc%2Fylg9r8liQq7yyONJL9w3JeSCkhTR36%2B5Pv2hhcm5fyN4LhCohcvYlmDHnZGa0NcInSSQIZghkJulr5OY55ioMfe1PoBu8pnOzHg8kh1VJvuQ5Gb2AAfjaX6jwoM%2Bw9GyNlQJef1B3WZlPsb9zZ%2BnPpXObbAt%2F7CO9dWJLoRJhs53dd0jEZVJkZXUgycDnhVvXQP2OqICiq4asK3sXnZzin1npp9mlqrGlV1iKqC3mLxC9fH3jN56jWrThAuHaBBpSA5TZmvjnhPD0POPysAzRIzvq6pGFwo%2Br%2Frr3SnMDbHPFhvIEg1e3oiNehEMQYd%2BqNIReNGqvMzbk5tsRoY0HJRNIT"
+MY_TOKEN = "t0V6HVBay785tnmu4YsXBUV44HHGfsMCcUOvXpEMNCI%2BIptVkbKT7uzM83t7qLcc%2CnNM9ovMxw68YH21lQ7LVtkxu6cUGrEDx27tSHEaGCoFrBjSVdnSJjVRZlWiIH3lZ1o36q%2BBFMoZ0p%2BmFOUvkkaaCPnU7KEdmids44lmyZI1l%2FRyFxr3FFbaa2U11PLRydQ%2BMjZ3FnqgjqaRtR7JauEsvvW5zlMgIE%2BynZl7RGP8EGpjta4Jk6TFPlqRQmG1sYqTm7%2B0lq7lTtVpEBr6o8SfQrRWuUFUjR9gov2oExuBPIacpp6jNg78wU%2FanRl3jZrtQe1ZKSeWf2sbZJMkwWR4Xg7kPp1UXettKknjUpgoL61sT%2Fy6HLpoUVOi8I0N7kMO4zabuYsh6DeLGNiQxqTN8Bmq%2BoVYrUssUXewyLTwv2FbStfm5wPVNdOiM9n0Hmgb0ScZIm6aRMSoCpGoEBV3z2e0lpM8CmmEWB%2FUJjeW%2Fg4Shw39D1IZluojCeblAezXnfhnR5dU4otB2Cq%2FO0%2BjAutZPLEgz4QiKvf8i9udpVsQmtnU9kz44N4Ix7XFF"
 WS_URL = f"wss://i-875.olaparty.com/ikxd_cproxy?token={MY_UID}"
 
 HEADERS = {
