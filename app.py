@@ -227,7 +227,7 @@ def smart_resolve_input(input_str):
     return None
 
 # ==========================================
-# 🌐 STREAMLIT UI DESIGN (RGB GAMING DISCO THEME)
+# 🌐 STREAMLIT UI DESIGN (RGB DISCO & ZOO/AQUARIUM THEME)
 # ==========================================
 st.set_page_config(page_title="LUCKY GODFATHER | RGB Command Center", page_icon="🎮", layout="wide")
 
@@ -242,15 +242,17 @@ st.markdown(
         font-family: 'Courier New', Courier, monospace; 
     }
     
-    /* DISCO LIGHT ANIMATION (Red, Green, Blue) FOR THE WORD "LUCKY" */
+    /* DISCO LIGHT ANIMATION (Red, Yellow, Green, Blue, Pink) */
     @keyframes discoText {
-        0% { color: #ff0040; text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040, 0 0 30px #ff0040; }
-        33% { color: #00ff00; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; }
-        66% { color: #0088ff; text-shadow: 0 0 10px #0088ff, 0 0 20px #0088ff, 0 0 30px #0088ff; }
-        100% { color: #ff0040; text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040, 0 0 30px #ff0040; }
+        0% { color: #ff0040; text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040; }
+        20% { color: #ffff00; text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00; }
+        40% { color: #00ff00; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
+        60% { color: #0088ff; text-shadow: 0 0 10px #0088ff, 0 0 20px #0088ff; }
+        80% { color: #ff00ff; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
+        100% { color: #ff0040; text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040; }
     }
     .disco-lucky {
-        animation: discoText 1.5s infinite;
+        animation: discoText 1.5s infinite linear;
         font-weight: 900;
         display: inline-block;
     }
@@ -259,13 +261,18 @@ st.markdown(
     h1, h2, h3, h4 { 
         color: #ffffff !important; 
         font-family: 'Courier New', Courier, monospace; 
+        position: relative;
+        z-index: 10;
     }
+    p { position: relative; z-index: 10; }
     
     /* RGB GAMING BORDER ANIMATION FOR INPUT BOXES AND BUTTONS */
     @keyframes rgbBorder {
         0% { border-color: #ff0040; box-shadow: 0 0 15px #ff0040; }
-        33% { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
-        66% { border-color: #0088ff; box-shadow: 0 0 15px #0088ff; }
+        20% { border-color: #ffff00; box-shadow: 0 0 15px #ffff00; }
+        40% { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
+        60% { border-color: #0088ff; box-shadow: 0 0 15px #0088ff; }
+        80% { border-color: #ff00ff; box-shadow: 0 0 15px #ff00ff; }
         100% { border-color: #ff0040; box-shadow: 0 0 15px #ff0040; }
     }
 
@@ -276,7 +283,9 @@ st.markdown(
         border-radius: 4px; 
         font-weight: bold; 
         border: 2px solid transparent !important;
-        animation: rgbBorder 3s infinite;
+        animation: rgbBorder 3s infinite linear;
+        position: relative;
+        z-index: 10;
     }
     
     /* BUTTON RGB GAMING STYLE */
@@ -289,25 +298,69 @@ st.markdown(
         height: 42px; 
         font-weight: bold; 
         transition: 0.3s; 
-        animation: rgbBorder 2s infinite;
+        animation: rgbBorder 2s infinite linear;
         text-transform: uppercase;
         letter-spacing: 1px;
+        position: relative;
+        z-index: 10;
     }
     .stButton>button:hover { 
         background-color: rgba(255,255,255,0.1) !important; 
         transform: scale(1.05); 
     }
     
+    /* ANIMALS/FISH BACKGROUND ANIMATION */
+    .animal-bg {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+    }
+    .animal {
+        position: absolute;
+        font-size: 30px;
+        right: -10%;
+        animation-name: roam;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        opacity: 0.8;
+    }
+    @keyframes roam {
+        0% { transform: translateX(50px) translateY(0px); }
+        25% { transform: translateX(-25vw) translateY(-30px); }
+        50% { transform: translateX(-50vw) translateY(20px); }
+        75% { transform: translateX(-75vw) translateY(-15px); }
+        100% { transform: translateX(-110vw) translateY(0px); }
+    }
+    
     /* HIDE STREAMLIT BRANDING */
     #MainMenu, footer, header {visibility: hidden;}
     </style>
+    
+    <!-- ANIMALS IN BACKGROUND -->
+    <div class="animal-bg">
+        <div class="animal" style="top: 10%; animation-duration: 18s; filter: hue-rotate(0deg);">🐼</div>
+        <div class="animal" style="top: 25%; animation-duration: 22s; filter: hue-rotate(90deg);">🐟</div>
+        <div class="animal" style="top: 40%; animation-duration: 15s; filter: hue-rotate(180deg);">🐍</div>
+        <div class="animal" style="top: 55%; animation-duration: 20s; filter: hue-rotate(270deg);">🐼</div>
+        <div class="animal" style="top: 70%; animation-duration: 25s; filter: hue-rotate(45deg);">🐟</div>
+        <div class="animal" style="top: 85%; animation-duration: 16s; filter: hue-rotate(135deg);">🐍</div>
+        <div class="animal" style="top: 15%; animation-duration: 24s; filter: hue-rotate(210deg); animation-delay: -5s;">🐼</div>
+        <div class="animal" style="top: 60%; animation-duration: 19s; filter: hue-rotate(300deg); animation-delay: -10s;">🐟</div>
+        <div class="animal" style="top: 30%; animation-duration: 21s; filter: hue-rotate(60deg); animation-delay: -8s;">🐍</div>
+        <div class="animal" style="top: 80%; animation-duration: 17s; filter: hue-rotate(330deg); animation-delay: -12s;">🐼</div>
+        <div class="animal" style="top: 45%; animation-duration: 23s; filter: hue-rotate(150deg); animation-delay: -15s;">🐟</div>
+        <div class="animal" style="top: 5%; animation-duration: 14s; filter: hue-rotate(250deg); animation-delay: -2s;">🐍</div>
+        <div class="animal" style="top: 90%; animation-duration: 20s; filter: hue-rotate(350deg); animation-delay: -7s;">🐟</div>
+    </div>
     """,
     unsafe_allow_html=True
 )
 
-# HTML Title (Using the disco class for "LUCKY")
-st.markdown("<h1 style='text-align: center;'>☠️ <span class='disco-lucky'>𝐋𝐔𝐂𝐊𝐘</span> 🌎 𝙂𝙤𝙙𝙛𝙖𝙩𝙝𝙚𝙧 🖥️</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 1.5rem; font-weight: bold;'> <span class='disco-lucky'>𝐋𝐔𝐂𝐊𝐘</span> 🌎 BOSS</p><hr style='border:1px solid #333;'>", unsafe_allow_html=True)
+# HTML Title (Using the disco class for "LUCKY" and "Godfather")
+st.markdown("<h1 style='text-align: center;'>☠️ <span class='disco-lucky'>𝐋𝐔𝐂𝐊𝐘</span> 🌎 <span class='disco-lucky'>𝙂𝙤𝙙𝙛𝙖𝙩𝙝𝙚𝙧</span> 🖥️</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 1.5rem; font-weight: bold;'> <span class='disco-lucky'>𝐋𝐔𝐂𝐊𝐘</span> 🌎 BOSS</p><hr style='border:1px solid #333; position:relative; z-index:10;'>", unsafe_allow_html=True)
 
 # 8 SERVERS LOOP CREATION
 for i, server in enumerate(SERVER_LIST):
@@ -317,11 +370,9 @@ for i, server in enumerate(SERVER_LIST):
         st.markdown(f"<h4 style='margin-top: 5px; color: #aaaaaa;'>{server['name']}</h4>", unsafe_allow_html=True)
     
     with col2:
-        # Har server ka apna alag input box
         target_input = st.text_input("Target", key=f"input_{i}", label_visibility="collapsed", placeholder=f"Room Link / ID for {server['name']}...")
         
     with col3:
-        # Har server ka apna alag button
         if st.button("🚀 CLICK ✅", key=f"btn_{i}"):
             if not target_input:
                 st.warning(f"⚠️ {server['name']} ke liye link daalo!")
@@ -344,4 +395,4 @@ for i, server in enumerate(SERVER_LIST):
                 else:
                     st.error("❌ INVALID TARGET.")
 
-st.markdown("<hr style='border:1px solid #333;'><p style='text-align: center; color: #777777; font-weight: bold;'>// DEVELOPED BY <span class='disco-lucky'>LUCKY</span> GODFATHER //</p>", unsafe_allow_html=True)
+st.markdown("<hr style='border:1px solid #333; position:relative; z-index:10;'><p style='text-align: center; color: #777777; font-weight: bold; position:relative; z-index:10;'>// DEVELOPED BY <span class='disco-lucky'>LUCKY</span> <span class='disco-lucky'>GODFATHER</span> //</p>", unsafe_allow_html=True)
