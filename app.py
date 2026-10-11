@@ -12,10 +12,17 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # ==========================================
-# ⚙️ CONFIGURATIONS
+# ⚙️ APNE 8 SERVERS KI DETAILS YAHAN DAALEIN
 # ==========================================
-RENDER_URLS = [
-    "https://hackarai.onrender.com"   # Tera main bot 2
+SERVER_LIST = [
+    {"name": "Server 1", "url": "https://server1.onrender.com"},
+    {"name": "Server 2", "url": "https://server2.onrender.com"},
+    {"name": "Server 3", "url": "https://server3.onrender.com"},
+    {"name": "Server 4", "url": "https://server4.onrender.com"},
+    {"name": "Server 5", "url": "https://server5.onrender.com"},
+    {"name": "Server 6", "url": "https://server6.onrender.com"},
+    {"name": "Server 7", "url": "https://server7.onrender.com"},
+    {"name": "Server 8", "url": "https://server8.onrender.com"},
 ]
 
 MY_UID = "4470446192" 
@@ -220,128 +227,60 @@ def smart_resolve_input(input_str):
     return None
 
 # ==========================================
-# 🌐 STREAMLIT UI DESIGN (HACKER THEME)
+# 🌐 STREAMLIT UI DESIGN (HACKER THEME MULTI-SERVER)
 # ==========================================
-st.set_page_config(page_title="LUCKY GODFATHER | Command Center", page_icon="☠️", layout="centered")
+st.set_page_config(page_title="LUCKY GODFATHER | Command Center", page_icon="☠️", layout="wide")
 
-# Custom Hacker CSS Styling
 st.markdown(
     """
     <style>
-    /* Dark Terminal Background */
-    .stApp {
-        background-color: #050505;
-        background-image: radial-gradient(circle, #0a1f0a 0%, #000000 90%);
-        color: #00ff00;
-        font-family: 'Courier New', Courier, monospace;
-    }
-    
-    /* Glowing Headers */
-    h1, h2, h3 {
-        color: #00ff00 !important;
-        text-shadow: 0 0 10px #00ff00, 0 0 20px #005500;
-        text-align: center;
-        font-family: 'Courier New', Courier, monospace;
-    }
-    
-    /* Terminal Text */
-    p, span, div {
-        font-family: 'Courier New', Courier, monospace !important;
-    }
-    
-    /* Input Box Hacker Style */
-    .stTextInput input {
-        background-color: rgba(0, 20, 0, 0.8) !important;
-        color: #00ff00 !important;
-        border: 1px solid #00ff00 !important;
-        box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-        border-radius: 4px;
-        text-align: center;
-        font-weight: bold;
-    }
-    .stTextInput input:focus {
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.7) !important;
-        border: 1px solid #00ff00 !important;
-    }
-    
-    /* Action Button Hacker Style */
-    .stButton>button {
-        background-color: transparent !important;
-        color: #00ff00 !important;
-        border: 2px solid #00ff00 !important;
-        border-radius: 8px;
-        box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-        transition: all 0.3s ease-in-out;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2px;
-        width: 100%;
-        padding: 15px !important;
-    }
-    .stButton>button:hover {
-        background-color: #00ff00 !important;
-        color: #000000 !important;
-        box-shadow: 0 0 30px #00ff00, 0 0 50px #00aa00;
-        transform: scale(1.02);
-    }
-    
-    /* Status Messages */
-    .stAlert {
-        background-color: rgba(0, 20, 0, 0.8) !important;
-        border: 1px solid #00ff00 !important;
-        color: #00ff00 !important;
-    }
-    
-    /* Hide Streamlit Branding */
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
+    .stApp { background-color: #050505; background-image: radial-gradient(circle, #0a1f0a 0%, #000000 90%); color: #00ff00; font-family: 'Courier New', Courier, monospace; }
+    h1, h2, h3, h4 { color: #00ff00 !important; text-shadow: 0 0 10px #00ff00, 0 0 20px #005500; font-family: 'Courier New', Courier, monospace; }
+    .stTextInput input { background-color: rgba(0, 20, 0, 0.8) !important; color: #00ff00 !important; border: 1px solid #00ff00 !important; border-radius: 4px; font-weight: bold; }
+    .stButton>button { background-color: transparent !important; color: #00ff00 !important; border: 2px solid #00ff00 !important; border-radius: 8px; width: 100%; height: 42px; font-weight: bold; transition: 0.3s; }
+    .stButton>button:hover { background-color: #00ff00 !important; color: #000 !important; box-shadow: 0 0 15px #00ff00; transform: scale(1.05); }
+    #MainMenu, footer, header {visibility: hidden;}
     </style>
     """,
     unsafe_allow_html=True
 )
 
-st.title("☠️𝐋𝐔𝐂𝐊𝐘🌎𝙂𝙤𝙙𝙛𝙖𝙩𝙝𝙚𝙧🖥️")
-st.markdown("<p style='text-align: center; font-size: 1.2rem;'>[+] SYS.ADMIN: ROOT | 𝐋𝐔𝐂𝐊𝐘</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: #88ff88;'>Is panel se aap bot network ko kisi bhi target room me bhej sakte hain.</p>", unsafe_allow_html=True)
+st.title("☠️ 𝐋𝐔𝐂𝐊𝐘🌎𝙂𝙤𝙙𝙛𝙖𝙩𝙝𝙚𝙧🖥️")
+st.markdown("<p style='text-align: center; font-size: 1.2rem;'>[+] SYS.ADMIN: ROOT | 𝐋𝐔𝐂𝐊𝐘 8-NODE CLUSTER</p><hr>", unsafe_allow_html=True)
 
-st.markdown("---")
+# 8 SERVERS LOOP CREATION
+for i, server in enumerate(SERVER_LIST):
+    col1, col2, col3 = st.columns([1, 4, 1])
+    
+    with col1:
+        st.markdown(f"<h4 style='margin-top: 5px;'>{server['name']}</h4>", unsafe_allow_html=True)
+    
+    with col2:
+        # Har server ka apna alag input box
+        target_input = st.text_input("Target", key=f"input_{i}", label_visibility="collapsed", placeholder=f"Room Link / ID for {server['name']}...")
+        
+    with col3:
+        # Har server ka apna alag button
+        if st.button("🚀 CLICK ✅", key=f"btn_{i}"):
+            if not target_input:
+                st.warning(f"⚠️ {server['name']} ke liye link daalo!")
+            else:
+                with st.spinner(f"⏳ {server['name']} - TRACING TARGET..."):
+                    target_cid = smart_resolve_input(target_input)
 
-# User input with terminal prefix
-user_input = st.text_input("root@lucky-godfather:~# ENTER TARGET (Room Link/):", placeholder="https://api.olaparty.com/d/...")
+                if target_cid:
+                    try:
+                        api_link = f"{server['url'].strip('/')}/change_room?cid={target_cid}"
+                        res = requests.get(api_link, timeout=15, verify=False)
+                        
+                        if res.status_code == 200:
+                            st.success(f"✅ {server['name']} SUCCESS: Bot gaya!")
+                            st.balloons()
+                        else:
+                            st.error(f"❌ {server['name']} ERROR {res.status_code}")
+                    except Exception as e:
+                        st.error(f"❌ {server['name']} OFFLINE ya UNREACHABLE.")
+                else:
+                    st.error("❌ INVALID TARGET.")
 
-st.markdown("<br>", unsafe_allow_html=True)
-
-# Action Button
-if st.button("🚀 Click✅"):
-    if not user_input:
-        st.warning("⚠️ ERROR: NO TARGET SPECIFIED. PLEASE ENTER LINK/ID.")
-    else:
-        with st.spinner("⏳ TRACING TARGET... RESOLVING ROOM ID..."):
-            target_cid = smart_resolve_input(user_input)
-
-        if target_cid:
-            st.success(f"✅ 𝐋𝐔𝐂𝐊𝐘🌎BOSS ke Hukum se Ai gaya")
-            st.info("🚀 Successful.")
-            
-            # Send requests to render bots
-            for url in RENDER_URLS:
-                url = url.strip("/") 
-                try:
-                    api_link = f"{url}/change_room?cid={target_cid}"
-                    res = requests.get(api_link, timeout=15, verify=False)
-                    
-                    if res.status_code == 200:
-                        st.success(f"✅ SERVER HACKED SUCCESSFUL")
-                    else:
-                        st.error(f"❌ SERVER REJECTED COMMAND. Code: {res.status_code}")
-                except Exception as e:
-                    st.error(f"❌ SERVER UNREACHABLE. TARGET OFFLINE.")
-            
-            st.balloons()
-            st.markdown("<h3 style='text-align: center;'>🎉 𝐋𝐔𝐂𝐊𝐘🌎𝙂𝙤𝙙𝙛𝙖𝙩𝙝𝙚𝙧🖥️ ZINDABAD 🙋🏻‍♂️</h3>", unsafe_allow_html=True)
-        else:
-            st.error("❌ FATAL ERROR: INVALID TARGET OR USER OFFLINE.")
-
-st.markdown("---")
-st.markdown("<p style='text-align: center; font-size: 0.8rem; color: #88ff88;'>// DEVELOPED BY LUCKY GODFATHER // </p>", unsafe_allow_html=True)
+st.markdown("<hr><p style='text-align: center; color: #88ff88;'>// DEVELOPED BY LUCKY GODFATHER //</p>", unsafe_allow_html=True)
