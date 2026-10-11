@@ -227,33 +227,94 @@ def smart_resolve_input(input_str):
     return None
 
 # ==========================================
-# 🌐 STREAMLIT UI DESIGN (HACKER THEME MULTI-SERVER)
+# 🌐 STREAMLIT UI DESIGN (RGB GAMING DISCO THEME)
 # ==========================================
-st.set_page_config(page_title="LUCKY GODFATHER | Command Center", page_icon="☠️", layout="wide")
+st.set_page_config(page_title="LUCKY GODFATHER | RGB Command Center", page_icon="🎮", layout="wide")
 
 st.markdown(
     """
     <style>
-    .stApp { background-color: #050505; background-image: radial-gradient(circle, #0a1f0a 0%, #000000 90%); color: #00ff00; font-family: 'Courier New', Courier, monospace; }
-    h1, h2, h3, h4 { color: #00ff00 !important; text-shadow: 0 0 10px #00ff00, 0 0 20px #005500; font-family: 'Courier New', Courier, monospace; }
-    .stTextInput input { background-color: rgba(0, 20, 0, 0.8) !important; color: #00ff00 !important; border: 1px solid #00ff00 !important; border-radius: 4px; font-weight: bold; }
-    .stButton>button { background-color: transparent !important; color: #00ff00 !important; border: 2px solid #00ff00 !important; border-radius: 8px; width: 100%; height: 42px; font-weight: bold; transition: 0.3s; }
-    .stButton>button:hover { background-color: #00ff00 !important; color: #000 !important; box-shadow: 0 0 15px #00ff00; transform: scale(1.05); }
+    /* Dark Background */
+    .stApp { 
+        background-color: #050505; 
+        background-image: radial-gradient(circle, #1a1a1a 0%, #000000 90%); 
+        color: #ffffff; 
+        font-family: 'Courier New', Courier, monospace; 
+    }
+    
+    /* DISCO LIGHT ANIMATION (Red, Green, Blue) FOR THE WORD "LUCKY" */
+    @keyframes discoText {
+        0% { color: #ff0040; text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040, 0 0 30px #ff0040; }
+        33% { color: #00ff00; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; }
+        66% { color: #0088ff; text-shadow: 0 0 10px #0088ff, 0 0 20px #0088ff, 0 0 30px #0088ff; }
+        100% { color: #ff0040; text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040, 0 0 30px #ff0040; }
+    }
+    .disco-lucky {
+        animation: discoText 1.5s infinite;
+        font-weight: 900;
+        display: inline-block;
+    }
+
+    /* GENERAL TEXT STYLING */
+    h1, h2, h3, h4 { 
+        color: #ffffff !important; 
+        font-family: 'Courier New', Courier, monospace; 
+    }
+    
+    /* RGB GAMING BORDER ANIMATION FOR INPUT BOXES AND BUTTONS */
+    @keyframes rgbBorder {
+        0% { border-color: #ff0040; box-shadow: 0 0 15px #ff0040; }
+        33% { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
+        66% { border-color: #0088ff; box-shadow: 0 0 15px #0088ff; }
+        100% { border-color: #ff0040; box-shadow: 0 0 15px #ff0040; }
+    }
+
+    /* INPUT BOX HACKER STYLE */
+    .stTextInput input { 
+        background-color: rgba(10, 10, 10, 0.9) !important; 
+        color: #ffffff !important; 
+        border-radius: 4px; 
+        font-weight: bold; 
+        border: 2px solid transparent !important;
+        animation: rgbBorder 3s infinite;
+    }
+    
+    /* BUTTON RGB GAMING STYLE */
+    .stButton>button { 
+        background-color: #111111 !important; 
+        color: #ffffff !important; 
+        border: 2px solid transparent !important; 
+        border-radius: 8px; 
+        width: 100%; 
+        height: 42px; 
+        font-weight: bold; 
+        transition: 0.3s; 
+        animation: rgbBorder 2s infinite;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .stButton>button:hover { 
+        background-color: rgba(255,255,255,0.1) !important; 
+        transform: scale(1.05); 
+    }
+    
+    /* HIDE STREAMLIT BRANDING */
     #MainMenu, footer, header {visibility: hidden;}
     </style>
     """,
     unsafe_allow_html=True
 )
 
-st.title("☠️ 𝐋𝐔𝐂𝐊𝐘🌎𝙂𝙤𝙙𝙛𝙖𝙩𝙝𝙚𝙧🖥️")
-st.markdown("<p style='text-align: center; font-size: 1.2rem;'>𝐋𝐔𝐂𝐊𝐘🌎BOSS</p><hr>", unsafe_allow_html=True)
+# HTML Title (Using the disco class for "LUCKY")
+st.markdown("<h1 style='text-align: center;'>☠️ <span class='disco-lucky'>𝐋𝐔𝐂𝐊𝐘</span> 🌎 𝙂𝙤𝙙𝙛𝙖𝙩𝙝𝙚𝙧 🖥️</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 1.5rem; font-weight: bold;'> <span class='disco-lucky'>𝐋𝐔𝐂𝐊𝐘</span> 🌎 BOSS</p><hr style='border:1px solid #333;'>", unsafe_allow_html=True)
 
 # 8 SERVERS LOOP CREATION
 for i, server in enumerate(SERVER_LIST):
     col1, col2, col3 = st.columns([1, 4, 1])
     
     with col1:
-        st.markdown(f"<h4 style='margin-top: 5px;'>{server['name']}</h4>", unsafe_allow_html=True)
+        st.markdown(f"<h4 style='margin-top: 5px; color: #aaaaaa;'>{server['name']}</h4>", unsafe_allow_html=True)
     
     with col2:
         # Har server ka apna alag input box
@@ -283,4 +344,4 @@ for i, server in enumerate(SERVER_LIST):
                 else:
                     st.error("❌ INVALID TARGET.")
 
-st.markdown("<hr><p style='text-align: center; color: #88ff88;'>// DEVELOPED BY LUCKY GODFATHER //</p>", unsafe_allow_html=True)
+st.markdown("<hr style='border:1px solid #333;'><p style='text-align: center; color: #777777; font-weight: bold;'>// DEVELOPED BY <span class='disco-lucky'>LUCKY</span> GODFATHER //</p>", unsafe_allow_html=True)
