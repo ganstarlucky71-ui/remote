@@ -24,7 +24,8 @@ SERVER_LIST = [
     {"name": "Server 7", "url": "https://online-8eeq.onrender.com"},
     {"name": "Servar 8", "url": "https://online-6nz0.onrender.com"},
     {"name": "Servar 9", "url": "randar token"},
-    {"name": "Smart Ai3", "url": "https://hackarai.onrender.com"}
+    {"name": "Smart Ai3", "url": "https://hackarai.onrender.com"},
+    {"name": "experiment", "url": "randar uptome"}
 ]
 
 MY_UID = "4470446192" 
