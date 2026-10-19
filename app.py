@@ -22,8 +22,8 @@ SERVER_LIST = [
     {"name": "Server 5", "url": "https://kamran-vtyt.onrender.com"},
     {"name": "Server 6", "url": "https://online-mg7e.onrender.com"},
     {"name": "Server 7", "url": "https://online-8eeq.onrender.com"},
-    {"name": "Smart Ai", "url": "https://smartai-f1ju.onrender.com"},
-    {"name": "Smart Ai2", "url": "https://ai-2-cfag.onrender.com"},
+    {"name": "Servar 8", "url": "https://online-6nz0.onrender.com"},
+    {"name": "Servar 9", "url": "randar token"},
     {"name": "Smart Ai3", "url": "https://hackarai.onrender.com"}
 ]
 
