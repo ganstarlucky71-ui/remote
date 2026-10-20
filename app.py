@@ -17,7 +17,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 SERVER_LIST = [
     {"name": "Server 1", "url": "https://online-kbwr.onrender.com"},
     {"name": "Server 2", "url": "https://online-tc0h.onrender.com"},
-    {"name": "Server 3", "url": "https://online-o8lk.onrender.com"},
+    {"name": "Server 3", "url": "https://online-28k9.onrender.com"},
     {"name": "Server 4", "url": "https://online-ujtf.onrender.com"},
     {"name": "Server 5", "url": "https://kamran-vtyt.onrender.com"},
     {"name": "Server 6", "url": "https://online-mg7e.onrender.com"},
