@@ -19,7 +19,7 @@ SERVER_LIST = [
     {"name": "Server 2", "url": "https://online-b5sr.onrender.com"},
     {"name": "Server 3", "url": "https://online-28k9.onrender.com"},
     {"name": "Server 4", "url": "https://online-ujtf.onrender.com"},
-    {"name": "Server 5", "url": "https://kamran-vtyt.onrender.com"},
+    {"name": "Server 5", "url": "https://online-g9o8.onrender.com"},
     {"name": "Server 6", "url": "https://online-mg7e.onrender.com"},
     {"name": "Server 7", "url": "https://online-8eeq.onrender.com"},
     {"name": "Servar 8", "url": "https://online-6nz0.onrender.com"},
