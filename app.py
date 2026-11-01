@@ -23,13 +23,13 @@ SERVER_LIST = [
     {"name": "Server 6", "url": "https://online-mg7e.onrender.com"},
     {"name": "Server 7", "url": "https://online-8eeq.onrender.com"},
     {"name": "Servar 8", "url": "https://online-nypk.onrender.com"},
-    {"name": "Servar 9", "url": "randar token"},
+    {"name": "Servar 9", "url": "https://online-8k7q.onrender.com"},
     {"name": "Smart Ai3", "url": "https://hackarai.onrender.com"},
     {"name": "experiment", "url": "randar uptome"}
 ]
 
 MY_UID = "4470446192" 
-MY_TOKEN = "za1kR3Ss3A51hgQSN4P3PKbTobHuNVnqE5IvZSsHCz%2BHms4VD6PYwB1XFif%2BoUG2%2CnNM9ovMxw6%2FA%2BwbbaAcOfB%2FptWqP5H%2BsTzaE4X0mt1%2F7zrjB1NlSSbXg4Bwa0g7LQKb9xt2ALjfa8BWZ48foeMLZx10%2BvHBcAX9C%2FFdbt%2FaCq0Coj304yPclGBCfD6%2BiMQzHe9p%2BM%2BEdTDfq7JTihHYom58l6j9D%2FYUiX0G2o%2BFGv2CjqwR%2FFsiKiLw690rpWDMThDmyekqO0rHxxZBOQ6EKnJL2oMMXMYt1tsNueZPbBPCPA4wJASFcLu83OHSCstLB%2FdYh2eBI2EYzLyP3ZZv0ttPfoRE8%2FH593cJJeHsV%2FeH5OHqU29woD%2BuswL7OoJ12yjlNlSjb070DEvHcrC4twaZVz7ZLRBv6L029vjIqsBVh0LqFFBnCXN2imNFd%2F3zoGLDQNrHwK%2BaDAH6n4jPDqAMq4AQAUpLZMHmTnecdu7KJflvLonuxnNZtcnMHBEAPhQrKJ0IY%2B7xklZ87YB%2F4oV95cXwfKHyduwdjp7Om7WBb5wWm1EtoMR51beuq"
+MY_TOKEN = "paqxIlY4D%2Bf3QaM4d5uYxf8ncrUfXJ5M%2FHVkQ3PPTTUshAoDFFrYGKf0XwuRMszb%2CnNM9ovMxw68QDV93ChKz3zo3fT5RCFv0L91AKx2sUI1ySktpYnMTOPUJwWs6n7ANcCxs12Y7lkbcNTurd6zisrsbQHSieeKgFAlKa8GXZx4UnUVONJ%2FuIScuILIZHVxXYiNmsfe5DQKtBbXNGCySZHC4ittdDCIOLuB7iVoPgnW0Jd7cCbeWTwf6uQbBuMWtjWRFPHc%2B9GUpISZ%2BhJq%2FCrb%2B5OX2S5QVMl%2FB%2Fe7mwMS75n7BpEZ90E5tPyL0hvOt9fojO4g1eym0SCpeDnDkmjQThlXDHvA3Zu9H0RxyPXSpWYDEWVlEn1eVCKqFdO1jA3idyQNaBw5Ol3EzqtfvfGl2uhTD5SS2YfJ4%2BEBiL7rRNJC4nH0kvqey%2BbN%2BBRNd%2FieblNP%2FvFLjzH8qp46T5OWdBRl4fqtQobgUxwaCv%2FjEZT3OJMWk0%2F0dUH%2FCQkmpJ8oltfrYQZQdDZxZ35A%2FBrafhTVAM%2BQpZmSX1JxMeyZ5GS2S7vJgWHyNJKLh1wsg"
 WS_URL = f"wss://i-875.olaparty.com/ikxd_cproxy?token={MY_UID}"
 
 HEADERS = {
